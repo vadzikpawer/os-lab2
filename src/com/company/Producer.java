@@ -41,9 +41,9 @@ public class Producer implements Runnable {
             }
             trial[MAX_KEY_SIZE - 1] = (char) (trial[MAX_KEY_SIZE - 1] + 1);
             for (int k = MAX_KEY_SIZE - 1; k > 0; k--) {
-                if ((trial[k] - Main.dictionary[0]) > symbols.length - 1) {
+                if ((trial[k] - Hash.dictionary[0]) > symbols.length - 1) {
                     trial[k - 1] = (char) (trial[k - 1] + 1);
-                    trial[k] = Main.dictionary[0];
+                    trial[k] = Hash.dictionary[0];
                 }
             }
         }

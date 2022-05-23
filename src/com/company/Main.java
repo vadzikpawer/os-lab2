@@ -26,9 +26,9 @@ public class Main {
         String content = "";
 
         try (FileInputStream fin = new FileInputStream(f)) {
-            int i = -1;
+            int i;
             while ((i = fin.read()) != -1) {
-                content += (char) i;
+                content += (char)i;
             }
             System.out.println("\n");
         } catch (IOException ex) {
@@ -53,7 +53,7 @@ public class Main {
         System.out.print("Введите количество потоков - ");
         int scount = in.nextInt();
 
-        hashs[1].passwordSelection(scount);
+        hashs[0].passwordSelection(scount);
 
     }
 }

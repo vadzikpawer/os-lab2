@@ -12,7 +12,7 @@ public class Hash {
     Thread[] consThread;
     LinkedList<String> sharedQueue = new LinkedList<>();
     int size = 10000;
-    char[] dictionary;
+    static char[] dictionary;
 
     public Hash() {
         hashString = "";
@@ -25,7 +25,7 @@ public class Hash {
     public void createDictionary() {
         final int ALPHAVITE_SIZE = 26;
         dictionary = new char[ALPHAVITE_SIZE];
-        for (char c = 'a'; c <= 'z'; c++) dictionary[c - '0' - 49] = c;
+        for (char c = 'a'; c <= 'z'; c++) dictionary[c - 'a'] = c;
     }
 
     public void passwordSelection(int streamCount) throws NoSuchAlgorithmException, InterruptedException {
